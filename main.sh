@@ -27,7 +27,7 @@ script_body() {
     modify_configuration ()
     {
         apt-get install -y dialog
-        # wget -O "configuration.sh" ""
+        wget -O "configuration.sh" "https://raw.githubusercontent.com/asperan/PC-minimal-setup/main/configuration.sh"
         dialog --erase-on-exit --no-cancel --title "Personalize configuration" --editbox "configuration.sh" $(( $(tput lines) / 3 * 2 )) $(( $(tput cols) / 3 * 2 ))
 
         CONTINUE_CONFIGURATION="$?"
@@ -46,15 +46,13 @@ script_body() {
         exit 1;
     fi
 
-    # Change repository to testing and do a full upgrade
-    download_and_source "URL" "enable-testing.sh"
+    download_and_source "https://raw.githubusercontent.com/asperan/PC-minimal-setup/main/enable-testing.sh" "enable-testing.sh"
 
     modify_configuration
 
-    download_and_source "URL" "doas.sh"
-    # Install doas, configure the user and add an alias
-    download_and_source "URL" "git.sh"
-    # Install git, configure it
+    download_and_source "https://raw.githubusercontent.com/asperan/PC-minimal-setup/main/doas.sh" "doas.sh"
+
+    download_and_source "https://raw.githubusercontent.com/asperan/PC-minimal-setup/main/git.sh" "git.sh"
 
     # Install i3, download its configuration
     # Install terminal emulator (termux? Alacritty? ...)
