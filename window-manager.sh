@@ -4,10 +4,12 @@ WALLPAPER_PATH="/etc/wallpaper.jpeg"
 
 wget -O "${WALLPAPER_PATH}" "${BASE_URL}/wallpaper/wallpaper-${WALLPAPER_SIZE}.jpeg"
 
-su "${SYSTEM_USER}" cat <<FEHBG > "/home/${SYSTEM_USER}/.fehbg"
+cat <<FEHBG > "/home/${SYSTEM_USER}/.fehbg"
 #!/bin/sh
 feh --no-fehbg --bg-scale '${WALLPAPER_PATH}'
 FEHBG
+
+chown "${SYSTEM_USER}" "/home/${SYSTEM_USER}/.fehbg"
 
 I3_CONFIG_FILE="/home/${SYSTEM_USER}/.config/i3/config"
 
