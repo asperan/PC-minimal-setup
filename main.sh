@@ -21,7 +21,7 @@ script_body() {
     # Download and allow the user to modify the configuration
     modify_configuration ()
     {
-        ${INSTALL_PACKAGE} install -y dialog
+        ${INSTALL_PACKAGE} -y dialog
         wget -O "configuration.sh" "https://raw.githubusercontent.com/asperan/PC-minimal-setup/main/configuration.sh"
         dialog --erase-on-exit --no-cancel --title "Personalize configuration" --editbox "configuration.sh" $(( $(tput lines) / 3 * 2 )) $(( $(tput cols) / 3 * 2 ))
 

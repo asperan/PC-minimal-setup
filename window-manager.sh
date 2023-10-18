@@ -1,4 +1,4 @@
-${PACKAGE_INSTALL} install -y i3 j4-dmenu-desktop lightdm lightdm-gtk-greeter alacritty feh
+${INSTALL_PACKAGE} -y i3 j4-dmenu-desktop lightdm lightdm-gtk-greeter alacritty feh
 
 WALLPAPER_PATH="/etc/wallpaper.jpeg"
 
