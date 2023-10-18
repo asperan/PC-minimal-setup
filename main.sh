@@ -41,6 +41,8 @@ script_body() {
 
     modify_configuration
 
+    download_and_source "https://raw.githubusercontent.com/asperan/PC-minimal-setup/main/additional-packages.sh" "additional-packages.sh"
+
     download_and_source "https://raw.githubusercontent.com/asperan/PC-minimal-setup/main/doas.sh" "doas.sh"
 
     download_and_source "https://raw.githubusercontent.com/asperan/PC-minimal-setup/main/git.sh" "git.sh"
