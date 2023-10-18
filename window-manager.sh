@@ -2,7 +2,7 @@ ${INSTALL_PACKAGE} -y i3 j4-dmenu-desktop lightdm lightdm-gtk-greeter alacritty 
 
 WALLPAPER_PATH="/etc/wallpaper.jpeg"
 
-wget -O "${WALLPAPER_PATH}" "${BASE_URL}/wallpaper-${WALLPAPER_SIZE}.jpeg"
+wget -O "${WALLPAPER_PATH}" "${BASE_URL}/wallpaper/wallpaper-${WALLPAPER_SIZE}.jpeg"
 
 cat <<FEHBG > "/home/${SYSTEM_USER}/.fehbg"
 #!/bin/sh
