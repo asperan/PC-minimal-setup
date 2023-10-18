@@ -16,7 +16,7 @@ I3_CONFIG_FILE="/home/${SYSTEM_USER}/.config/i3/config"
 mkdir -p "/home/${SYSTEM_USER}/.config/i3"
 
 # Copy i3 config file
-wget -O "${I3_CONFIG_FILE}" "${BASE_URL}/i3.config"
+wget -O "${I3_CONFIG_FILE}" "${BASE_URL}/i3/i3.config"
 
 # Download font and extract it in /usr/local/share/fonts
 wget -O "/tmp/roboto.zip" "${BASE_URL}/RobotoMono.zip"
