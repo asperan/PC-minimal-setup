@@ -7,7 +7,7 @@ set -euo pipefail
 script_body() {
 
     # The command to run to install packages. It should accept the option '-y'.
-    INSTALL_PACKAGE="xpbs-install"
+    INSTALL_PACKAGE="xbps-install"
 
     # Downloads a file and source it.
     # Params:
