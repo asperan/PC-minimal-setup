@@ -15,5 +15,5 @@ sed -E -i "s/([^#])(.*)(${BASE_DEBIAN_VERSION})(.*)/\\1\\2testing\\4/" "${SOURCE
 
 apt-get update
 
-apt-get upgrade -y
+DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 
