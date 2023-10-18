@@ -44,7 +44,7 @@ script_body() {
 
     modify_configuration
 
-    download_and_source "${BASE_URL}/additional-packages.sh" "additional-packages.sh"
+    download_and_source "${BASE_URL}/cli-tools.sh" "cli-tools.sh"
 
     download_and_source "${BASE_URL}/git.sh" "git.sh"
 
