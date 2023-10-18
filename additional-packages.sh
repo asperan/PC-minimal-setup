@@ -1,1 +1,1 @@
-${INSTALL_PACKAGE} -y openssh firefox thunderbird unzip fzf
+${INSTALL_PACKAGE} -y openssh unzip fzf
