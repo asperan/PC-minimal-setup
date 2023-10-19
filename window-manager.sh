@@ -19,9 +19,9 @@ mkdir -p "/home/${SYSTEM_USER}/.config/i3"
 wget -O "${I3_CONFIG_FILE}" "${BASE_URL}/i3/i3.config"
 
 # Download font and extract it in /usr/local/share/fonts
-FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/RobotoMono.zip"
-wget -O "/tmp/roboto.zip" "${FONT_URL}"
-unzip "/tmp/roboto.zip" -d "/usr/local/share/fonts"
+FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/${FONT}.tar.xz"
+wget -O "/tmp/${FONT}.tar.xz" "${FONT_URL}"
+tar -xf "/tmp/${FONT}.tar.xz" -C "/usr/local/share/fonts"
 
 mkdir -p "/home/${SYSTEM_USER}/.config/alacritty"
 
