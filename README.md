@@ -1,12 +1,16 @@
 # PC setup
+This repository contains the scripts used to configure my PCs after an ArchLinux fresh install (even in the "post-installation" step).
 
-This repository contains the scripts used to configure my PCs after a fresh install.
+The only prerequisite is to install wget:
+```
+pacman -S --noconfirm wget
+```
 
-They assume to be run on Debian.
+**OPTIONAL**: change the working directory to something like `/tmp/setup` to not clutter `/root`.
 
 To start the setup process, run `main.sh` or run the following snippet:
 ```
-wget -O main.sh https://raw.githubusercontent.com/asperan/PC-minimal-setup/main/main.sh
+wget -O main.sh https://raw.githubusercontent.com/asperan/PC-minimal-setup/arch/main.sh
 chmod u+x ./main.sh
 ./main.sh
 ```
