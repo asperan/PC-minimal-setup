@@ -36,6 +36,13 @@ script_body() {
         source "configuration.sh"
     }
 
+    # Change the owner (and group) of the file $1 to the system user recursively
+    # $1: the path of the file to chown
+    system_user_own ()
+    {
+        chown -R "${SYSTEM_USER}:${SYSTEM_USER}" "$1"
+    }
+
     # Assure this script has root privileges
     if [ "$(whoami)" != "root" ] ; then
         echo "This script must be run with root privileges" >&2
