@@ -19,10 +19,11 @@ mkdir -p "/home/${SYSTEM_USER}/.config/i3"
 # Copy i3 config file
 wget -O "${I3_CONFIG_FILE}" "${BASE_URL}/i3/i3.config"
 
-# Download font and extract it in /usr/local/share/fonts
+# Download font and extract it in /usr/share/fonts
+mkdir -p "/usr/share/fonts"
 FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/${FONT}.tar.xz"
 wget -O "/tmp/${FONT}.tar.xz" "${FONT_URL}"
-tar -xf "/tmp/${FONT}.tar.xz" -C "/usr/local/share/fonts"
+tar -xf "/tmp/${FONT}.tar.xz" -C "/usr/share/fonts" --exclude '*.md' --exclude '*.txt'
 
 mkdir -p "/home/${SYSTEM_USER}/.config/alacritty"
 
