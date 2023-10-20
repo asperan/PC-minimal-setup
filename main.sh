@@ -7,8 +7,8 @@ set -euo pipefail
 script_body() {
 
     # The command to run to install packages. It should accept the option '-y'.
-    INSTALL_PACKAGE="xbps-install"
-    BASE_URL="https://raw.githubusercontent.com/asperan/PC-minimal-setup/main"
+    INSTALL_PACKAGE="pacman -S"
+    BASE_URL="https://raw.githubusercontent.com/asperan/PC-minimal-setup/arch"
 
     # Downloads a file and source it.
     # Params:
