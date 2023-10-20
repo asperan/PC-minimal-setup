@@ -27,5 +27,5 @@ tar -xf "/tmp/${FONT}.tar.xz" -C "/usr/share/fonts" --exclude '*.md' --exclude '
 
 mkdir -p "/home/${SYSTEM_USER}/.config/alacritty"
 
-wget -O "/home/${SYSTEM_USER}/.config/alacritty/alacritty.yml" "${BASE_URL}/alacritty.yml"
+wget -O "/home/${SYSTEM_USER}/.config/alacritty/alacritty.yml" "${BASE_URL}/alacritty/alacritty.yml"
 
