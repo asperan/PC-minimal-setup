@@ -1,4 +1,4 @@
-${INSTALL_PACKAGE} -y i3 j4-dmenu-desktop lightdm lightdm-gtk-greeter alacritty feh
+${INSTALL_PACKAGE} -y xorg i3 i3status i3lock dmenu j4-dmenu-desktop lightdm lightdm-gtk-greeter alacritty feh xss-lock
 
 WALLPAPER_PATH="/etc/wallpaper.jpeg"
 
