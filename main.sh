@@ -6,6 +6,8 @@ set -euo pipefail
 # download of this script.
 script_body() {
 
+    # TODO: change dir to a /tmp one to not clutter the root "home"
+
     # The command to run to install packages. The "no confirm" option can be specified below.
     INSTALL_PACKAGE="pacman -S"
     NO_CONFIRM_FLAG="--noconfirm"
