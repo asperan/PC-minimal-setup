@@ -1,1 +1,1 @@
-${INSTALL_PACKAGE} -y openssh fzf
+${INSTALL_PACKAGE} -y openssh fzf xz
