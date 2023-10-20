@@ -10,6 +10,7 @@ feh --no-fehbg --bg-scale '${WALLPAPER_PATH}'
 FEHBG
 
 chown "${SYSTEM_USER}" "/home/${SYSTEM_USER}/.fehbg"
+chmod +x "/home/${SYSTEM_USER}/.fehbg"
 
 I3_CONFIG_FILE="/home/${SYSTEM_USER}/.config/i3/config"
 
