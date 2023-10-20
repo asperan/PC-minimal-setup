@@ -1,4 +1,4 @@
-${INSTALL_PACKAGE} -y xorg i3 i3status i3lock dmenu j4-dmenu-desktop lightdm lightdm-gtk-greeter alacritty feh xss-lock
+${INSTALL_PACKAGE} ${NO_CONFIRM_FLAG} xorg i3 i3status i3lock dmenu j4-dmenu-desktop lightdm lightdm-gtk-greeter alacritty feh xss-lock
 
 systemctl enable lightdm
 

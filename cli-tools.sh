@@ -1,1 +1,1 @@
-${INSTALL_PACKAGE} -y openssh fzf xz neovim
+${INSTALL_PACKAGE} ${NO_CONFIRM_FLAG} openssh fzf xz neovim
