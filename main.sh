@@ -60,6 +60,9 @@ script_body() {
 
     download_and_source "${BASE_URL}/window-manager.sh" "window-manager.sh"
 
+    download_and_source "${BASE_URL}/neovim.sh" "neovim.sh"
+
+    download_and_source "${BASE_URL}/nnn.sh" "nnn.sh"
     # Install nnn
     # Other software
 
