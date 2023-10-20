@@ -8,7 +8,7 @@ script_body() {
 
     # The command to run to install packages. The "no confirm" option can be specified below.
     INSTALL_PACKAGE="pacman -S"
-    NO_CONFIRM_FLAG="-y"
+    NO_CONFIRM_FLAG="--noconfirm"
     BASE_URL="https://raw.githubusercontent.com/asperan/PC-minimal-setup/arch"
 
     # Downloads a file and source it.
