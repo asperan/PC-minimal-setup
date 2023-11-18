@@ -60,10 +60,9 @@ script_body() {
 
     download_and_source "${BASE_URL}/nnn.sh" "nnn.sh"
 
-    # The neovim configuration must be done after installing NPM and rbenv (and a ruby distribution)
     download_and_source "${BASE_URL}/neovim.sh" "neovim.sh"
 
-    # TODO: install applications
+    download_and_source "${BASE_URL}/applications.sh" "applications.sh"
 }
 
 script_body
