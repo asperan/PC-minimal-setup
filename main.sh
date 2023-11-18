@@ -25,7 +25,7 @@ script_body() {
     {
         ${INSTALL_PACKAGE} ${NO_CONFIRM_FLAG} dialog
         wget -O "configuration.sh" "${BASE_URL}/configuration.sh"
-        dialog --erase-on-exit --no-cancel --title "Personalize configuration" --editbox "configuration.sh" $(( $(tput lines) / 3 * 2 )) $(( $(tput cols) / 3 * 2 ))
+        dialog --erase-on-exit --no-cancel --title "Personalize configuration" --editbox "configuration.sh" $(( $(tput lines) * 2 / 3 )) $(( $(tput cols) * 2 / 3 ))
 
         CONTINUE_CONFIGURATION="$?"
 
