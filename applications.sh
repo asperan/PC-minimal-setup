@@ -12,4 +12,4 @@ done
 
 # For libreoffice packages there need to be word splitting
 # shellcheck disable=2086
-${INSTALL_PACKAGE} -y firefox thunderbird ${LIBREOFFICE_PACKAGES} podman btop flatpak
+${INSTALL_PACKAGE} ${NO_CONFIRM_FLAG} firefox thunderbird ${LIBREOFFICE_PACKAGES} podman btop flatpak
