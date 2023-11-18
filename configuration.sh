@@ -1,3 +1,5 @@
+#!/bin/false
+# shellcheck shell=bash
 SYSTEM_USER="asperan"
 
 GIT_USER_NAME="Alex Speranza"
