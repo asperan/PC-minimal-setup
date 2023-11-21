@@ -6,8 +6,13 @@ The only prerequisite is to install wget:
 pacman -S --noconfirm wget
 ```
 
+or by specifying it in the additional packages question.
+
 **OPTIONAL**: change the working directory to something like `/tmp/setup` to not clutter `/root`.
 
+<!--
+TODO: change the branch to 'main' rather than 'arch'
+-->
 To start the setup process, run `main.sh` or run the following snippet:
 ```
 wget -O main.sh https://raw.githubusercontent.com/asperan/PC-minimal-setup/arch/main.sh
