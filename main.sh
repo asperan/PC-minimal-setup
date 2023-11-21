@@ -24,17 +24,20 @@ script_body() {
     modify_configuration ()
     {
         ${INSTALL_PACKAGE} ${NO_CONFIRM_FLAG} dialog
-        wget -O "configuration.sh" "${BASE_URL}/configuration.sh"
-        dialog --erase-on-exit --no-cancel --title "Personalize configuration" --editbox "configuration.sh" $(( $(tput lines) * 2 / 3 )) $(( $(tput cols) * 2 / 3 ))
+        wget -O "base-configuration.sh" "${BASE_URL}/configuration.sh"
+        exec 3> "./configuration.sh"
+        dialog --erase-on-exit --no-cancel --output-fd 3 --title "Personalize configuration" --editbox "base-configuration.sh" $(( $(tput lines) * 2 / 3 )) $(( $(tput cols) * 2 / 3 ))
 
         CONTINUE_CONFIGURATION="$?"
+
+        exec 3<&-
 
         if [ ! "${CONTINUE_CONFIGURATION}" ] ; then
             echo "Configuration cancelled." >&2
             exit 1
         fi
 
-        source "configuration.sh"
+        source "./configuration.sh"
     }
 
     # Change the owner (and group) of the file $1 to the system user recursively
